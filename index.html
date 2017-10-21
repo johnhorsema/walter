@@ -10,11 +10,16 @@
       var direct_line_secret = '5xVfhWD334w.cwA.WP4.cOQ5nmenM2awN6_ggfGZIxKcngxNzqfV7A5NnuB_d-c';
       var user_id = 'You';
       var bot_id = 'walter-shk';
+      const speechOptions = {
+				speechRecognizer: new BotChat.Speech.BrowserSpeechRecognizer(),
+				speechSynthesizer: new BotChat.Speech.BrowserSpeechSynthesizer()
+			};
       BotChat.App({
         directLine: { secret: direct_line_secret },
         user: { id: user_id },
         bot: { id: bot_id },
-        resize: 'detect'
+        resize: 'detect',
+        speechOptions: speechOptions
       }, document.getElementById("bot"));
     </script>
   </body>
