@@ -1,1 +1,19 @@
-<iframe src='https://webchat.botframework.com/embed/walter-shk?s=6T8xsHAQISM.cwA.9wg.IlvjmjkPxW-CXeWY9rsTqHRLcFOseR-Uc3sIxp0OSUo'></iframe>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="bot"/>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+    <script>
+      var direct_line_secret = '5xVfhWD334w.cwA.WP4.cOQ5nmenM2awN6_ggfGZIxKcngxNzqfV7A5NnuB_d-c';
+      BotChat.App({
+        directLine: { secret: direct_line_secret },
+        user: { id: 'userid' },
+        bot: { id: 'botid' },
+        resize: 'detect'
+      }, document.getElementById("bot"));
+    </script>
+  </body>
+</html>
